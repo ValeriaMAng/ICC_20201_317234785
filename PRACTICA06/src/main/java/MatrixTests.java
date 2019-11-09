@@ -1,5 +1,7 @@
 public class MatrixTests{
-  public static void scalarProduct_test() {
+  
+    public static void scalarProduct_test() {
+        
         double[][] t = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
         double[][] s = { { 2, 4, 6 }, { 8, 10, 12 }, { 14, 16, 18 } };
         Matrix x = new Matrix(t);
@@ -13,6 +15,7 @@ public class MatrixTests{
     }
 
     public static void add_test() {
+        
         double[][] t = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
         double[][] s = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
         double[][] r = { { 2, 4, 6 }, { 8, 10, 12 }, { 14, 16, 18 } };
@@ -28,6 +31,7 @@ public class MatrixTests{
     }
 
     public static void matrixProduct_test() {
+        
         double[][] t = { { 2, 0 }, { 1, 3 } };
         double[][] s = { { -1, -1 }, { 5, 6 } };
         double[][] r = { { -2, -2 }, { 14, 17 } };
@@ -43,6 +47,7 @@ public class MatrixTests{
     }
 
     public static void setElement_test() {
+         
         double[][] t = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
         double[][] s = { { 0, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
         Matrix x = new Matrix(t);
@@ -56,6 +61,7 @@ public class MatrixTests{
     }
 
     public static void getElement_test() {
+       
         double[][] t = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
         Matrix x = new Matrix(t);
         if (x.getElement(0, 0) == 1) {
@@ -66,6 +72,7 @@ public class MatrixTests{
     }
 
     public static void determinant_test() {
+        
         double[][] t ={{2,0},{-1,3}};
         Matrix x = new Matrix(t);
         x.determinant();
@@ -77,6 +84,7 @@ public class MatrixTests{
     }
 
     public static void equals_test() {
+        
         double[][] t = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
         double[][] s = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
         Matrix x = new Matrix(t);
@@ -89,6 +97,7 @@ public class MatrixTests{
     }
 
     public static void main(String[] args) {
+        
         scalarProduct_test();
         add_test();
         matrixProduct_test();
