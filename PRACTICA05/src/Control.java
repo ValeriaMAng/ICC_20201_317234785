@@ -3,35 +3,35 @@ import java.util.Arrays;
 
 public class Control{
 
-
+    //Metodo que determina si una palabra es palíndromo o no lo es.
     public static boolean problema1(String palabra){
 	
-    int ini = 0;
-	int fin = palabra.length() - 1;
-	boolean palindromo = true;
-	
-        while(ini < fin){
+	    int ini = 0;
+	    int fin = palabra.length() - 1;
+	    boolean palindromo = true;
+	    while(ini < fin){
 	        if(palabra.charAt(ini) != palabra.charAt(fin)){
 		    palindromo = false;
 	        }
-	    ini++;
-	    fin--;
+	        ini++;
+	        fin--;
 	    } return palindromo;
     }
 
+    //Metodo que dado un arreglo A y un número K, determinar si hay 2 números en el arreglo que sumen K.
     public static boolean problema2(int[] arreglo, int k){
 	   
-    boolean resultado = false;
-	
+	    boolean resultado = false;
         for(int a = 0; a < arreglo.length; a++){
 	        for(int b = 1; b < arreglo.length; b++){
-	            if(arreglo[a] + arreglo[b] == k){
-		    resultado = true;
-	            }
+		        if(arreglo[a] + arreglo[b] == k){
+		        resultado = true;
+		        }
 	        }
 	    } return resultado;
     }
 
+    //Metodo que dado un arreglo A, retornar el mismo arreglo pero ordenado. 
     public static void problema3(int[] arreglo){
        
         for ( int a = 0; a < (arreglo.length-1);a++){
@@ -44,41 +44,43 @@ public class Control{
             }
         }
     }
-
+    
+    //Metodo que realiza una Búsqueda binaria, Dado un arreglo ordenado A, buscar un número K y regresar true si está, false en otro caso.
     public static boolean problema4(int[] arreglo, int buscando){
 	
-    boolean numero = false;
-	    for(int a = 0; a < arreglo.length; a++){
+	    boolean numero = false;
+        for(int a = 0; a < arreglo.length; a++){
 	        if(arreglo[a] == buscando){
 		    numero = true;
 	        }
         } return numero;
     }
 
-
+    //Metodo para saber si un número K es primo
     public static boolean problema5(int n){
 
         if (n == 1) return false;
-        for (int a = 2; a < n; a++){
-            if (n%a == 0) return false;
-        }
-         return true;
+            for (int a = 2; a < n; a++){
+                if (n%a == 0) return false;
+            }
+	    return true;
     }
     
+    //Metodo que regresa todos los números primos menores a un numero N.
     public static int[] problema6(int n){
-	    
+	
         int cont = 0;
         for(int a = 1; a <= n; a++){
             if(problema5(a)){
-                cont++;
+             cont++;
             }
         }
         int[]primos = new int[cont];
         int contador = 0;
         for(int b = 1; b < n; b++){
             if(problema5(b)){
-                primos[contador] = b;
-                contador++;
+            primos[contador] = b;
+            contador++;
             }
         } return primos;
     }
