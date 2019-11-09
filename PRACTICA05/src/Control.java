@@ -11,7 +11,7 @@ public class Control{
 	    boolean palindromo = true;
 	    while(ini < fin){
 	        if(palabra.charAt(ini) != palabra.charAt(fin)){
-		    palindromo = false;
+		        palindromo = false;
 	        }
 	        ini++;
 	        fin--;
@@ -25,7 +25,7 @@ public class Control{
         for(int a = 0; a < arreglo.length; a++){
 	        for(int b = 1; b < arreglo.length; b++){
 		        if(arreglo[a] + arreglo[b] == k){
-		        resultado = true;
+		            resultado = true;
 		        }
 	        }
 	    } return resultado;
@@ -51,7 +51,7 @@ public class Control{
 	    boolean numero = false;
         for(int a = 0; a < arreglo.length; a++){
 	        if(arreglo[a] == buscando){
-		    numero = true;
+		        numero = true;
 	        }
         } return numero;
     }
@@ -72,15 +72,15 @@ public class Control{
         int cont = 0;
         for(int a = 1; a <= n; a++){
             if(problema5(a)){
-             cont++;
+                cont++;
             }
         }
         int[]primos = new int[cont];
         int contador = 0;
         for(int b = 1; b < n; b++){
             if(problema5(b)){
-            primos[contador] = b;
-            contador++;
+                primos[contador] = b;
+                contador++;
             }
         } return primos;
     }
